@@ -31,5 +31,19 @@ func newAvenger(HeroName string, NormalName string) *Avenger {
 }
 ```
 
+Here's a more shorthand way to write this. 
+
+
+```go
+func newAvenger(HeroName string, NormalName string) *Avenger {
+  ID++   // note it by default this value starts at zero. 
+  return Avenger{
+		ID:            ID,
+		SuperHeroName: HeroName,
+		RealName:      NormalName,
+	 }  
+  
+}
+```
 
 
