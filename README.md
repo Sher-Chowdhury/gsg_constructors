@@ -18,7 +18,7 @@ now we need to ensure that all Avenger objects variables have valid content, and
 
 
 ```go
-func newAvenger(HeroName string, NormalName string)  {
+func newAvenger(HeroName string, NormalName string) *Avenger {
   AvengerDetails := Avenger{
 		ID:            ID,
 		SuperHeroName: HeroName,
@@ -26,8 +26,10 @@ func newAvenger(HeroName string, NormalName string)  {
 	}
   ID++   // note it by default this value starts at zero. 
 
-  // We are returning a pointer, only because there's no need to return anything. 
+  // This returns the object' memory location, only because there's no need to return anything. 
   return &AvengerDetails
 }
 ```
+
+
 
